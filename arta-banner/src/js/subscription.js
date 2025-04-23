@@ -27,10 +27,7 @@ export function initSubscription() {
   weeklyBtn.addEventListener("click", () => selectOption("weekly"));
 
   continueBtn.addEventListener("click", () => {
-    if (selectedOption && links[selectedOption]) {
-      window.location.href = links[selectedOption];
-    } else {
-      alert("Please select a subscription option.");
-    }
+    if (!selectedOption || !links[selectedOption]) return;
+    window.location.href = links[selectedOption];
   });
 }

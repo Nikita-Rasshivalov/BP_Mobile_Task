@@ -30,8 +30,8 @@ body {
 }
 
 .cross {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   box-sizing: border-box;
 }
@@ -53,9 +53,9 @@ body {
 }
 
 .title-text {
-  font-size: 42px;
+  font-size: 2.625rem;
   font-weight: 900;
-  line-height: 46px;
+  line-height: 2.875rem;
   color: #fff;
   text-shadow: 0 0 48px rgba(4, 3, 26, 0.8332);
 }
@@ -67,8 +67,8 @@ body {
 }
 
 .feature {
-  width: 106px;
-  height: 139px;
+  width: 6.625rem;
+  height: 8.6875rem;
   position: relative;
 }
 
@@ -79,7 +79,7 @@ body {
 
 .feature-text {
   position: absolute;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 100%;
   color: #fff;
@@ -96,9 +96,9 @@ body {
 }
 
 .option {
-  border-radius: 100px;
-  width: 327px;
-  height: 56px;
+  border-radius: 6.25rem;
+  width: 20.4375rem;
+  height: 3.5rem;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -112,12 +112,12 @@ body {
 
 .option--best-offer,
 .option--offer {
-  padding: 18px 56px 18px 24px;
+  padding: 1.125rem 3.5rem 1.125rem 1.5rem;
 }
 
 .option-title {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-transform: uppercase;
 }
 
@@ -129,7 +129,7 @@ body {
 .price-sub {
   opacity: 0.7;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .option--best-offer {
@@ -141,16 +141,16 @@ body {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .label-container {
   position: absolute;
   top: -11px;
   right: 22px;
-  width: 121px;
-  height: 22px;
-  border-radius: 100px;
+  width: 7.5625rem;
+  height: 1.375rem;
+  border-radius: 6.25rem;
   background: linear-gradient(270deg, #00b5ff 0%, #632af7 53.01%, #ff96f4 100%);
   box-shadow: 0px 1px 6px 0px #0000007e;
   display: flex;
@@ -160,9 +160,9 @@ body {
 }
 
 .label-container-inner {
-  width: 119px;
-  height: 20px;
-  border-radius: 100px;
+  width: 7.4375rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
   background: linear-gradient(90deg, #bc1fef 0%, #0035ff 100%);
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ body {
 }
 
 .label-container::before {
-  width: 128px;
+  width: 8rem;
   right: 100%;
   background: linear-gradient(
     108.44deg,
@@ -194,8 +194,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
   pointer-events: none;
 
@@ -254,7 +254,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -269,8 +269,8 @@ body {
 
 .option--continue-title {
   color: #070b33;
-  line-height: 24px;
-  font-size: 20px;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -284,9 +284,9 @@ body {
 }
 
 .footer-link a {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 200;
-  line-height: 18px;
+  line-height: 1.125rem;
   color: #fff;
   text-underline-offset: 3px;
   white-space: nowrap;
@@ -295,6 +295,9 @@ body {
 /* selector */
 .selected {
   border: 1px solid #fff;
+}
+.option--continue:active {
+  background: #cdc4c4a9;
 }
 
 /* iPhone SE  */
@@ -310,11 +313,11 @@ body {
   }
 
   .features {
-    margin: 24px 24px 33px 24px;
+    margin: 1.5rem 1.5rem 2.0625rem 1.5rem;
   }
 
   .footer {
-    margin: 28px 47px 8px 47px;
+    margin: 1.75rem 2.9375rem 0.5rem 2.9375rem;
   }
 }
 
@@ -344,16 +347,16 @@ body {
     transform: scale(1.05);
   }
 
-  .features {
-    margin: 16px 24px 26px 24px;
-  }
-
   .option--continue {
     margin-top: 8px;
   }
 
+  .features {
+    margin: 1rem 1.5rem 1.625rem 1.5rem;
+  }
+
   .footer {
-    margin: 34px 47px 38px 47px;
+    margin: 2.125rem 2.9375rem 2.375rem 2.9375rem;
   }
 
   .cross {
@@ -376,11 +379,11 @@ body {
   }
 
   .features {
-    margin: 20px 24px 26px 28px;
+    margin: 1.25rem 1.5rem 1.625rem 1.75rem;
   }
 
   .footer {
-    margin: 50px 47px 60px 47px;
+    margin: 3.125rem 2.9375rem 3.75rem 2.9375rem;
   }
 }
 
