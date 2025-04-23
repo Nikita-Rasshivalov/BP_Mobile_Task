@@ -297,6 +297,10 @@ body {
   border: 1px solid #fff;
 }
 
+.option--continue:active {
+  background: #cdc4c4a9;
+}
+
 /* iPhone SE  */
 @media screen and (min-width: 320px) {
   .banner {
