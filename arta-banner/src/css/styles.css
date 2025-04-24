@@ -16,7 +16,11 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .banner {
@@ -106,8 +110,15 @@ body {
   justify-content: space-between;
   box-sizing: border-box;
   backdrop-filter: blur(10.87px);
+  -webkit-backdrop-filter: blur(10.87px);
   color: #fff;
   border: 1px solid transparent;
+}
+
+@media not all and (backdrop-filter) {
+  .option {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .option--best-offer,
@@ -192,62 +203,11 @@ body {
 .option--best-offer::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 50%;
-  pointer-events: none;
-
-  background: linear-gradient(
-    140.91deg,
-    #00cfff 0%,
-    #01b4ff 30%,
-    rgba(1, 180, 255, 0.5) 80%,
-    rgba(1, 180, 255, 0.0001) 100%
-  );
-
-  mask-image: radial-gradient(
-      circle,
-      transparent 67%,
-      rgba(0, 0, 0, 0.7) 68%,
-      black 70%,
-      black 72%,
-      transparent 73%
-    ),
-    radial-gradient(
-      circle at 67% -17%,
-      transparent 0%,
-      rgba(0, 0, 0, 0.7) 10%,
-      black 12%,
-      black 45%,
-      rgba(0, 0, 0, 0.7) 48%,
-      transparent 54.1%
-    );
-
-  mask-composite: intersect;
-  mask-repeat: no-repeat;
-
-  -webkit-mask-image: radial-gradient(
-      circle,
-      transparent 67%,
-      rgba(0, 0, 0, 0.7) 68%,
-      black 70%,
-      black 72%,
-      transparent 73%
-    ),
-    radial-gradient(
-      circle at 67% -17%,
-      transparent 0%,
-      rgba(0, 0, 0, 0.7) 10%,
-      black 12%,
-      black 45%,
-      rgba(0, 0, 0, 0.7) 48%,
-      transparent 54.1%
-    );
-
-  -webkit-mask-composite: destination-in;
-  -webkit-mask-repeat: no-repeat;
+  top: -2px;
+  right: -2px;
+  width: 25.5px;
+  height: 27.78px;
+  background: url("../assets/images/Path.svg") no-repeat center / contain;
 }
 
 .offer-container {
@@ -300,20 +260,23 @@ body {
   background: #cdc4c4a9;
 }
 
-/* iPhone SE  */
+/* iPhone SE */
 @media screen and (min-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+
   .banner {
     background-image: url("../assets/images/Arta_8iphone_1/bg@2x.webp");
   }
 
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(0.95);
+  .cross {
+    top: 37px;
+    left: 16px;
   }
 
   .features {
-    margin: 1.5rem 1.5rem 2.0625rem 1.5rem;
+    margin: 1.5rem 0.5rem 2.0625rem 0.5rem;
   }
 
   .footer {
@@ -323,12 +286,9 @@ body {
 
 /* iPhone SE (2nd gen), iPhone 11 Pro */
 @media screen and (min-width: 375px) {
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(1);
+  html {
+    font-size: 16px;
   }
-
   .cross {
     top: 37px;
     left: 16px;
@@ -339,12 +299,6 @@ body {
 @media screen and (min-width: 390px) {
   .banner {
     background-image: url("../assets/images/Arta_13iphone_1/bg@2x.webp");
-  }
-
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(1.05);
   }
 
   .option--continue {
@@ -372,14 +326,8 @@ body {
     left: 16px;
   }
 
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(1.1);
-  }
-
   .features {
-    margin: 1.25rem 1.5rem 1.625rem 1.75rem;
+    margin: 1.25rem 0.5rem 1.625rem 1.75rem;
   }
 
   .footer {
