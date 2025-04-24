@@ -16,7 +16,11 @@ html,
 body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .banner {
@@ -96,9 +100,9 @@ body {
 }
 
 .option {
-  border-radius: 100px;
-  width: 327px;
-  height: 56px;
+  border-radius: 6.25rem;
+  width: 20.4375rem;
+  height: 3.5rem;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -106,8 +110,15 @@ body {
   justify-content: space-between;
   box-sizing: border-box;
   backdrop-filter: blur(10.87px);
+  -webkit-backdrop-filter: blur(10.87px);
   color: #fff;
   border: 1px solid transparent;
+}
+
+@media not all and (backdrop-filter) {
+  .option {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .option--best-offer,
@@ -192,62 +203,11 @@ body {
 .option--best-offer::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  pointer-events: none;
-
-  background: linear-gradient(
-    140.91deg,
-    #00cfff 0%,
-    #01b4ff 30%,
-    rgba(1, 180, 255, 0.5) 80%,
-    rgba(1, 180, 255, 0.0001) 100%
-  );
-
-  mask-image: radial-gradient(
-      circle,
-      transparent 67%,
-      rgba(0, 0, 0, 0.7) 68%,
-      black 70%,
-      black 72%,
-      transparent 73%
-    ),
-    radial-gradient(
-      circle at 67% -17%,
-      transparent 0%,
-      rgba(0, 0, 0, 0.7) 10%,
-      black 12%,
-      black 45%,
-      rgba(0, 0, 0, 0.7) 48%,
-      transparent 54.1%
-    );
-
-  mask-composite: intersect;
-  mask-repeat: no-repeat;
-
-  -webkit-mask-image: radial-gradient(
-      circle,
-      transparent 67%,
-      rgba(0, 0, 0, 0.7) 68%,
-      black 70%,
-      black 72%,
-      transparent 73%
-    ),
-    radial-gradient(
-      circle at 67% -17%,
-      transparent 0%,
-      rgba(0, 0, 0, 0.7) 10%,
-      black 12%,
-      black 45%,
-      rgba(0, 0, 0, 0.7) 48%,
-      transparent 54.1%
-    );
-
-  -webkit-mask-composite: destination-in;
-  -webkit-mask-repeat: no-repeat;
+  top: -2px;
+  right: -2px;
+  width: 25.5px;
+  height: 27.78px;
+  background: url("../assets/images/Path.svg") no-repeat center / contain;
 }
 
 .offer-container {
@@ -307,12 +267,6 @@ body {
     background-image: url("../assets/images/Arta_8iphone_1/bg@2x.webp");
   }
 
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(0.95);
-  }
-
   .features {
     margin: 24px 24px 33px 24px;
   }
@@ -342,12 +296,6 @@ body {
     background-image: url("../assets/images/Arta_13iphone_1/bg@2x.webp");
   }
 
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(1.05);
-  }
-
   .features {
     margin: 16px 24px 26px 24px;
   }
@@ -371,12 +319,6 @@ body {
   .cross {
     top: 74px;
     left: 16px;
-  }
-
-  .wrapper,
-  .main,
-  .footer {
-    transform: scale(1.1);
   }
 
   .features {
