@@ -71,8 +71,6 @@ body::-webkit-scrollbar {
 }
 
 .feature {
-  width: 6.625rem;
-  height: 8.6875rem;
   position: relative;
 }
 
@@ -101,8 +99,6 @@ body::-webkit-scrollbar {
 
 .option {
   border-radius: 6.25rem;
-  width: 20.4375rem;
-  height: 3.5rem;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -260,27 +256,31 @@ body::-webkit-scrollbar {
   background: #cdc4c4a9;
 }
 
-/* iPhone SE */
+/* iPhone SE  */
 @media screen and (min-width: 320px) {
   html {
     font-size: 14px;
   }
-
   .banner {
     background-image: url("../assets/images/Arta_8iphone_1/bg@2x.webp");
   }
 
-  .cross {
-    top: 37px;
-    left: 16px;
+  .features {
+    margin: 24px 24px 33px 24px;
   }
 
-  .features {
-    margin: 1.5rem 0.5rem 2.0625rem 0.5rem;
+  .feature {
+    width: 6.625rem;
+    height: 8.6875rem;
+  }
+
+  .option {
+    width: 20.4375rem;
+    height: 3.5rem;
   }
 
   .footer {
-    margin: 1.75rem 2.9375rem 0.5rem 2.9375rem;
+    margin: 28px 47px 8px 47px;
   }
 }
 
@@ -301,21 +301,42 @@ body::-webkit-scrollbar {
     background-image: url("../assets/images/Arta_13iphone_1/bg@2x.webp");
   }
 
-  .option--continue {
-    margin-top: 8px;
+  .features {
+    margin: 16px 24px 26px 24px;
   }
 
-  .features {
-    margin: 1rem 1.5rem 1.625rem 1.5rem;
+  .feature {
+    width: 6.875rem;
+    height: 9.125rem;
+  }
+
+  .option {
+    width: 21.375rem;
+    height: 3.5rem;
+  }
+
+  .option--continue {
+    margin-top: 0.5rem;
   }
 
   .footer {
-    margin: 2.125rem 2.9375rem 2.375rem 2.9375rem;
+    margin: 34px 47px 38px 47px;
   }
 
   .cross {
     top: 64px;
     left: 16px;
+  }
+}
+
+/* iPhone 8+ */
+@media screen and (min-width: 414px) {
+  .cross {
+    top: 73px;
+    left: 16px;
+  }
+  .footer {
+    margin: 34px 47px 20px 47px;
   }
 }
 
@@ -326,12 +347,44 @@ body::-webkit-scrollbar {
     left: 16px;
   }
 
+  .title-text {
+    font-size: 46px;
+    font-weight: 900;
+  }
+
   .features {
-    margin: 1.25rem 0.5rem 1.625rem 1.75rem;
+    margin: 32px 24px 26px 24px;
+  }
+
+  .feature {
+    width: 7.5rem;
+    height: 9.375rem;
+  }
+
+  .option {
+    width: 22rem;
+    height: 3.875rem;
+  }
+
+  .option--continue {
+    margin-top: 0.5rem;
+  }
+
+  .option-title {
+    font-size: 20px;
+  }
+
+  .price-main,
+  .price-sub {
+    font-size: 18px;
   }
 
   .footer {
-    margin: 3.125rem 2.9375rem 3.75rem 2.9375rem;
+    margin: 34px 47px 55px 47px;
+  }
+
+  .footer-link a {
+    font-size: 1rem;
   }
 }
 
