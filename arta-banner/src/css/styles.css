@@ -255,7 +255,10 @@ body::-webkit-scrollbar {
     font-size: 14px;
   }
   .banner {
-    background-image: url("../assets/images/Arta_8iphone_1/bg@2x.png");
+    background-image: image-set(
+      url("../assets/images/Arta_8iphone_1/bg@2x.png") 2x,
+      url("../assets/images/Arta_8iphone_1/bg@3x.png") 3x
+    );
   }
 
   .features {
@@ -291,7 +294,10 @@ body::-webkit-scrollbar {
 /* iPhone 14 */
 @media screen and (min-width: 390px) {
   .banner {
-    background-image: url("../assets/images/Arta_13iphone_1/bg@2x.png");
+    background-image: image-set(
+      url("../assets/images/Arta_13iphone_1/bg@2x.png") 2x,
+      url("../assets/images/Arta_13iphone_1/bg@3x.png") 3x
+    );
   }
 
   .features {
